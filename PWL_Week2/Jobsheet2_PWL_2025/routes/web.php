@@ -16,6 +16,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+use App\Http\Controllers\WelcomeController;
+
+Route::get('/greeting', [WelcomeController::class, 
+'greeting']); 
+
 use App\Http\Controllers\PhotoController; 
 Route::resource('photos', PhotoController::class);
 
