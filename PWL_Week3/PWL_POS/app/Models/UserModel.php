@@ -10,5 +10,7 @@ class UserModel extends Model
     use HasFactory;
 
     protected $table = 'm_user'; //menedefinisikan nama tabel yang digunakan oleh model ini
-    protected $primarykey = 'user_id'; //menedefinisikan primary key dari tabel yang digunakan
+    protected $primaryKey = 'user_id'; //menedefinisikan primary key dari tabel yang digunakan
+
+    protected $fillable = ['level_id', 'username', 'nama'];
 }
